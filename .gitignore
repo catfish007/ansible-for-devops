@@ -9,3 +9,35 @@ test.sh
 */roles/geerlingguy.*
 */provisioning/roles/geerlingguy.*
 */collections/ansible_collections/community/*
+
+# Python
+*.pyc
+__pycache__/
+
+# Terraform
+**/.terragrunt-cache/*
+**/.terraform/*
+*.tfstate
+terraform/gcp/environments/**/.tmp
+**/*.plan
+
+# Ansible
+**/.galaxy-roles/*
+ansible/configs/
+ansible/playbooks/*.retry
+.vault-pass
+.secret
+ansible/**/gce.ini
+ansible/**/gce.py
+**/inventory/*
+**_play_*.sh
+
+# Misc
+.idea/
+**/*~
+**/*.log
+**/.DS_Store
+**/Thumbs.db
+python_virtual_env/*
+.vscode/*
+.envrc

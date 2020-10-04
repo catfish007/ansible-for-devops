@@ -1,0 +1,17 @@
+---
+
+- hosts: all
+  roles:
+  - { role: nmap, become: true, become_method: sudo, become_user: root }
+  
+  vars_files:
+    - ~/workspace/ansible-for-devops/.secret
+
+  tasks: 
+  - name: Install nmap and tools
+    become_method: sudo 
+    apt:
+      pkg:
+      - nmap
+      - tcpdump
+
