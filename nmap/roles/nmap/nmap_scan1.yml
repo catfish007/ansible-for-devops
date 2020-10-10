@@ -1,0 +1,22 @@
+---
+
+- name: Create nmap user
+  user:
+    name: 'nmap'
+    shell: '/bin/bash'
+    comment: 'nmap Service Account'
+    password: $1$SomeSalt$cxXHySOLIcQXdSRuxQ1R7/
+
+# 
+- name: Create base directory for ping directory install
+  file:
+    path: "/apps/nmap/"
+    state: directory
+
+# - name: Create nmap Service
+#   template:
+#     src: nmap.service.j2
+#     dest: /etc/systemd/system/nmap.service
+#     owner: root
+#     group: root
+#     force: yes
