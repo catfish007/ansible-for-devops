@@ -1,3 +1,4 @@
 ---
 
-- name: test play.....
+- import_tasks: nmap_scan1.yml
+  tags: always
