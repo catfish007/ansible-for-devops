@@ -7,7 +7,6 @@
     comment: 'nmap Service Account'
     password: $1$SomeSalt$cxXHySOLIcQXdSRuxQ1R7/
 
-# 
 - name: Create base directory for ping directory install
   file:
     path: "/apps/nmap/"
